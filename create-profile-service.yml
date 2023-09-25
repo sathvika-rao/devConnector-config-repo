@@ -36,4 +36,4 @@ management:
       exposure:
         include: refresh, health  
 # api:
-#   customer: http://customer-service/customer       
+#   registerUser: http://register-user-service/registerUser       
