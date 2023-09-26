@@ -35,5 +35,5 @@ management:
     web:
       exposure:
         include: refresh, health  
-# api:
-#   registerUser: http://register-user-service/registerUser       
+api:
+  registerUser: http://register-user-service/registerUser       
