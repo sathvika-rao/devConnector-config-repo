@@ -1,0 +1,37 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: register-user-service
+        uri: lb://register-user-service
+        predicates:
+        - Path=/registerUser/**
+      - id: create-profile-service
+        uri: lb://create-profile-service
+        predicates:
+        - Path=/createProfile/** 
+      - id: experience-service
+        uri: lb://experience-service
+        predicates:
+        - Path=/experience/** 
+      - id: education-service
+        uri: lb://education-service
+        predicates:
+        - Path=/education/**   
+        
+server:
+  port: 9191
+  error:
+    include-message: always
+
+eureka:
+  instance:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/  
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
