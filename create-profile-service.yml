@@ -37,5 +37,5 @@ management:
         include: refresh, health  
 api:
   auth: http://auth-service/api/authenticate    
-  experience: http://experience-service/api/experience
-  education: http://education-service/api/education
+  exp: http://experience-service/api/experience
+  edu: http://education-service/api/education
