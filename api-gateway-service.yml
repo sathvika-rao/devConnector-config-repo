@@ -2,22 +2,22 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: register-user-service
-        uri: lb://register-user-service
+      id: auth-service
+        uri: lb://auth-service
         predicates:
-        - Path=/registerUser/**
+        - Path=/api/authenticate/**
       - id: create-profile-service
         uri: lb://create-profile-service
         predicates:
-        - Path=/createProfile/** 
+        - Path=/api/createProfile/** 
       - id: experience-service
         uri: lb://experience-service
         predicates:
-        - Path=/experience/** 
+        - Path=/api/experience/** 
       - id: education-service
         uri: lb://education-service
         predicates:
-        - Path=/education/**   
+        - Path=/api/education/**   
         
 server:
   port: 9191
