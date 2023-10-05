@@ -21,5 +21,5 @@ eureka:
   
 jwt:
   secret: mySecretKey
-  expireMs: 120000
-  refrEshexpireMs: 120000
+  expireMs: 12000000
+  refrEshexpireMs: 12000000
